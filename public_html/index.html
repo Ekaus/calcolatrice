@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calcolatrice V1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="design.css">
+        <script type="text/javascript" src="jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="Avvio.js"></script>
+
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <!---<td><input type="number" id="operando1"></td><td id="operatore"></td><td><input type="number" id="operando2"></td>--->
+                    <td id="risul" colspan="4" style="border: 1px solid black">0</td>
+                </tr>
+                <tr>
+                    <td><button id="add" class="operatore">+</button></td>
+                    <td><button id="sub" class="operatore">-</button></td>
+                    <td><button id="times" class="operatore">*</button></td>
+                    <td><button id="div" class="operatore">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="cifre">7</button></td>
+                    <td><button class="cifre">8</button></td>
+                    <td><button class="cifre">9</button></td>
+					<td><button id="clear" class="gestori">C</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button class="cifre">4</button></td>
+                    <td><button class="cifre">5</button></td>
+                    <td><button class="cifre">6</button></td>
+					<td><button id="back" class="gestori">←</button></td>
+					
+                </tr>
+                <tr>
+                    <td><button class="cifre">1</button></td>
+                    <td><button class="cifre">2</button></td>
+                    <td><button class="cifre">3</button></td>
+					<td rowspan="2"><button id="uguale" class="equals">=</button></td>
+                </tr>
+                <tr>
+                    <td><button class="spazioVuoto"></button></td>
+                    <td><button class="cifre">0</button></td>
+                    <td><button class="cifre">.</button></td>
+                </tr>
+            </table>
+            <br>
+            <!--<p id="primoNumero"></p>
+            <p id="operatoreScelto"></p>
+            <p id="secondoNumero"></p>
+			<br>-->
+        </div>
+    </body>
+</html>

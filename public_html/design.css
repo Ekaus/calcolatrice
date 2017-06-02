@@ -1,0 +1,193 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-mag-2017, 11.16.50
+    Author     : cristiano.rado
+*/
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+table, th, td {
+    border: 0px solid black;
+    font-size: 30px;
+}
+
+span.cifra {
+    font-size: 60px;
+}
+
+td {
+    width: 75px;
+    height: 20%;
+}
+
+input {
+    width:	300px;
+    height:	20%;
+}
+
+button {
+	height: 60px;
+	width: 60px;
+	background: #42d934;
+	background-image: -webkit-linear-gradient(top, #42d934, #2c64b8);
+	background-image: -moz-linear-gradient(top, #42d934, #2c64b8);
+	background-image: -ms-linear-gradient(top, #42d934, #2c64b8);
+	background-image: -o-linear-gradient(top, #42d934, #2c64b8);
+	background-image: linear-gradient(to bottom, #42d934, #2c64b8);
+	-webkit-border-radius: 28px;
+	-moz-border-radius: 28px;
+	border-radius: 26px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 24px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+button:hover {
+	background: #3ac42d;
+	background-image: -webkit-linear-gradient(top, #3ac42d, #34c0d9);
+	background-image: -moz-linear-gradient(top, #3ac42d, #34c0d9);
+	background-image: -ms-linear-gradient(top, #3ac42d, #34c0d9);
+	background-image: -o-linear-gradient(top, #3ac42d, #34c0d9);
+	background-image: linear-gradient(to bottom, #3ac42d, #34c0d9);
+	text-decoration: none;
+}
+
+button.cifre {
+    background-color: green; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 24px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button.cifre:hover {
+    background-color: lightgreen;
+    color: black;
+}
+button.cifre {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 28px;
+	-moz-border-radius: 28px;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 32px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+button.cifre:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+button.operatore {
+    background-color: #ffcc00; /* Green */
+    border:none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 24px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button.operatore:hover {
+    color: black;
+}
+
+button.operatore {
+	background: #d93434;
+	background-image: -webkit-linear-gradient(top, #d93434, #b8682b);
+	background-image: -moz-linear-gradient(top, #d93434, #b8682b);
+	background-image: -ms-linear-gradient(top, #d93434, #b8682b);
+	background-image: -o-linear-gradient(top, #d93434, #b8682b);
+	background-image: linear-gradient(to bottom, #d93434, #b8682b);
+	-webkit-border-radius: 28px;
+	-moz-border-radius: 28px;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 32px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+button.operatore:hover {
+	background: #fc693c;
+	background-image: -webkit-linear-gradient(top, #fc693c, #d9d934);
+	background-image: -moz-linear-gradient(top, #fc693c, #d9d934);
+	background-image: -ms-linear-gradient(top, #fc693c, #d9d934);
+	background-image: -o-linear-gradient(top, #fc693c, #d9d934);
+	background-image: linear-gradient(to bottom, #fc693c, #d9d934);
+	text-decoration: none;
+}
+/*button.equals {
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 24px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button.equals:hover {
+    background-color: #66cfff;
+    color: black;
+}
+button.gestori {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 24px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button.gestori:hover {
+    background-color: lightblue;
+    color: black;
+}*/
+button.spazioVuoto {
+    display: none;
+}

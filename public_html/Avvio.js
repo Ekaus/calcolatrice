@@ -3,7 +3,6 @@ $(document).ready(function () {
 	this.numeroSalvato = "";
 	this.puntoInserito = false;
 	this.operatore = "";
-
 	this.calcola = function () {
 		var primo = parseFloat(that.numeroSalvato);
 		var secondo = parseFloat(that.numeroDigitato);

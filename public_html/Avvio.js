@@ -4,38 +4,38 @@ $(document).ready(function () {
 	this.puntoInserito = false;
 	this.operatore = "";
 
-	/*this.calcola = function () {
-	 var primo = parseFloat(that.numeroSalvato);
-	 var secondo = parseFloat(that.numeroDigitato);
-	 var risultato = 0;
-	 switch (that.operatore) {
-	 case "+":
-	 risultato = primo + secondo;
-	 $("#risul").text(risultato);
-	 break;
-	 case "-":
-	 risultato = primo - secondo;
-	 $("#risul").text(risultato);
-	 break;
-	 case "*":
-	 risultato = primo * secondo;
-	 $("#risul").text(risultato);
-	 break;
-	 case "/":
-	 if (secondo === 0) {
-	 alert("Non puoi dividere per 0");
-	 
-	 $("#risul").fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
-	 } else {
-	 risultato = primo / secondo;
-	 $("#risul").text(risultato);
-	 }
-	 break;
-	 }
-	 that.numeroSalvato = risultato;
-	 that.numeroDigitato = "";
-	 $("#risul").text(risultato);
-	 };*/
+	this.calcola = function () {
+		var primo = parseFloat(that.numeroSalvato);
+		var secondo = parseFloat(that.numeroDigitato);
+		var risultato = secondo;
+		switch (that.operatore) {
+			case "+":
+				risultato = primo + secondo;
+				$("#risul").text(risultato);
+				break;
+			case "-":
+				risultato = primo - secondo;
+				$("#risul").text(risultato);
+				break;
+			case "*":
+				risultato = primo * secondo;
+				$("#risul").text(risultato);
+				break;
+			case "/":
+				if (secondo === 0) {
+					alert("Non puoi dividere per 0");
+
+					$("#risul").fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+				} else {
+					risultato = primo / secondo;
+					$("#risul").text(risultato);
+				}
+				break;
+		}
+		that.numeroSalvato = risultato;
+		that.numeroDigitato = "";
+		$("#risul").text(risultato);
+	};
 	var that = this;
 
 	$("#add").click(function () {

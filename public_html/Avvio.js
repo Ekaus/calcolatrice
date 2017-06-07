@@ -35,7 +35,7 @@ $(document).ready(function () {
 		that.numeroSalvato = risultato;
 		that.numeroDigitato = "";
 		$("#risul").text(risultato);
-	};*/
+	};
 	var that = this;
 
 	$("#add").click(function () {

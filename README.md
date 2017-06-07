@@ -8,6 +8,6 @@ E' sufficiente scaricare l'archivio ed eseguire il file index.html contenuto den
 Viene utilizzata la libreria JQuery (versione 3.2.1, la versione più attuale).
 
 ## Autori
-Questo software è stato creato da:
--Rado Cristiano Alex
+Questo software è stato creato da:<br />
+-Rado Cristiano Alex<br />
 -Stefano Pasquato

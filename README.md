@@ -1,6 +1,7 @@
 ## Sintesi
 Questo programma scritto in JavaScript simula la calcolatrice di Windows, con la possibilità di effettuare operazioni in cascata.
 
+
 ## Installazione
 E' sufficiente scaricare l'archivio ed eseguire il file index.html contenuto dentro alla cartella public_html.
 

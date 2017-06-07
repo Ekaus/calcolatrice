@@ -3,10 +3,11 @@ $(document).ready(function () {
 	this.numeroSalvato = "";
 	this.puntoInserito = false;
 	this.operatore = "";
+
 	this.calcola = function () {
 		var primo = parseFloat(that.numeroSalvato);
 		var secondo = parseFloat(that.numeroDigitato);
-		var risultato = secondo;
+		var risultato = 0;
 		switch (that.operatore) {
 			case "+":
 				risultato = primo + secondo;
@@ -17,7 +18,7 @@ $(document).ready(function () {
 				$("#risul").text(risultato);
 				break;
 			case "*":
-				risultato = (primo * 10) * (secondo * 10) / (10 * 10);
+				risultato = primo * secondo;
 				$("#risul").text(risultato);
 				break;
 			case "/":
@@ -34,35 +35,44 @@ $(document).ready(function () {
 		that.numeroSalvato = risultato;
 		that.numeroDigitato = "";
 		$("#risul").text(risultato);
-	};
+	};*/
 	var that = this;
 
 	$("#add").click(function () {
-		that.calcola();
+		if (!that.operatore) {
+			that.numeroSalvato = that.numeroDigitato;
+			that.numeroDigitato = "";
+		}
 		that.operatore = "+";
-
 		//$("#primoNumero").text(that.numeroSalvato);
 		//$("#operatoreScelto").text(that.operatore);
 		that.puntoInserito = false;
 	});
 	$("#sub").click(function () {
-		that.calcola();
+		if (!that.operatore) {
+			that.numeroSalvato = that.numeroDigitato;
+			that.numeroDigitato = "";
+		}
 		that.operatore = "-";
-
 		//$("#primoNumero").text(that.numeroSalvato);
 		//$("#operatoreScelto").text(that.operatore);
 		that.puntoInserito = false;
 	});
 	$("#times").click(function () {
-		that.calcola();
+		if (!that.operatore) {
+			that.numeroSalvato = that.numeroDigitato;
+			that.numeroDigitato = "";
+		}
 		that.operatore = "*";
-
 		//$("#primoNumero").text(that.numeroSalvato);
 		//$("#operatoreScelto").text(that.operatore);
 		that.puntoInserito = false;
 	});
 	$("#div").click(function () {
-		that.calcola();
+		if (!that.operatore) {
+			that.numeroSalvato = that.numeroDigitato;
+			that.numeroDigitato = "";
+		}
 		that.operatore = "/";
 		//$("#primoNumero").text(that.numeroSalvato);
 		//$("#operatoreScelto").text(that.operatore);
@@ -97,11 +107,36 @@ $(document).ready(function () {
 		if (!that.operatore) {
 			alert("Non hai selezionato un operatore");
 		} else {
-			that.calcola();
-			that.operatore = null;
-			that.numeroDigitato = "0";
+			var primo = parseFloat(that.numeroSalvato);
+			var secondo = parseFloat(that.numeroDigitato);
+			var risultato = 0;
+			switch (that.operatore) {
+				case "+":
+					risultato = primo + secondo;
+					$("#risul").text(risultato);
+					break;
+				case "-":
+					risultato = primo - secondo;
+					$("#risul").text(risultato);
+					break;
+				case "*":
+					risultato = (primo * 10) * (secondo * 10) / (10 * 10); //moltiplicazioni e divisioni per 10 necessarie per evitare problemi di arrotondamento con il float
+					$("#risul").text(risultato);
+					break;
+				case "/":
+					if (secondo === 0) {
+						alert("Non puoi dividere per 0");
+						$("#risul").fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300); //l'area del risultato lampeggia
+					} else {
+						risultato = primo / secondo;
+						$("#risul").text(risultato);
+					}
+					break;
+			}
 			that.numeroSalvato = "";
-			that.puntoInserito = false;
+			that.numeroDigitato = "";
+			that.operatore = "";
+			$("#risul").text(risultato);
 		}
 	});
 });
